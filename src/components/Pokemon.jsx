@@ -36,7 +36,7 @@ const Pokemon = () => {
           {filteredPokemons.map((pokemon)=> {//Return secundario
            return (<div key = {pokemon.id}>
             <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-            Nombre:<p>{pokemon.name}</p>
+            <p>{pokemon.name}</p>
             </div>
             )
           })}
