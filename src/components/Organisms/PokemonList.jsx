@@ -1,6 +1,10 @@
+//En el Organisms, la información extraída de la carpeta Molecules será enviada al mapeo de Pokemons
+//para que pueda leer el nombre de los pokeons y obtener su imagen, se recuerda que la etiqueta
+//PokemonItem solo puede enviar datos dependiendo del parametro que hayamos puesto en la funcion
+
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {PokemonItem} from "../Molecules/PokemonItem"
+import {PokemonItem} from "../Molecules/PokemonItem/PokemonItem"
 const PokemonList = () => {
     const [pokemons, setPokemons] = useState([]);
     useEffect(() => {
