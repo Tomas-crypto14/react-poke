@@ -10,6 +10,10 @@ const Header = () => {
             <span>
                 <Link to="/pokemon">Pokemon</Link>
             </span>
+            /
+            <span>
+              <Link to="/pokemonList">PokemonLista</Link>
+            </span>
         </div>
     </nav>
   )

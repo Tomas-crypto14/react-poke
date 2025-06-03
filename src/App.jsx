@@ -1,6 +1,7 @@
 //import {PokemonList} from "./components/Organisms/PokemonList"
 import Pokemon from "./components/Pokemon"
 import Header from "./components/Header"
+import { PokemonList } from "./components/Organisms/PokemonList"
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import {useState} from "react"
 import './App.css';
@@ -12,9 +13,11 @@ function App () {
   <BrowserRouter>
   <Header/>
     <Routes>
+      <Route path="/PokemonList" element={<PokemonList/>}/>
       <Route path="/Pokemon" element={<Pokemon/>}/>
     </Routes>
   </BrowserRouter>
+  
   </>
   )
 };
