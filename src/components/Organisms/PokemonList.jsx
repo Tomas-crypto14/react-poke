@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {PokemonItem} from "../Molecules/PokemonItem"
 const PokemonList = () => {
     const [pokemons, setPokemons] = useState([]);
     useEffect(() => {
@@ -13,14 +14,8 @@ const PokemonList = () => {
   return (
     <div>
         <h2>PokemonList</h2>
-        {pokemons.map((pokemon, index) => {
-            return (
-            <>
-                <img src={`https://img.pokemondb.net/sprites/home/normal/${pokemon.name}.png`}/>
-                <p key={index}>{pokemon.name}</p>
-            </>
-            )
-        })}
+        {pokemons.map((pokemon, index) => (<PokemonItem name={pokemon.name} key={index}/>
+    ))}
     </div>
     )
 }
