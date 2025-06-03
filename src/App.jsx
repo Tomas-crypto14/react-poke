@@ -1,7 +1,7 @@
 //import {PokemonList} from "./components/Organisms/PokemonList"
 import Pokemon from "./components/Pokemon"
 import Header from "./components/Header"
-import { PokemonList } from "./components/Organisms/PokemonList"
+import { PokemonList } from "./components/Organisms/PokemonList/PokemonList"
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import {useState} from "react"
 import './App.scss';
