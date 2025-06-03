@@ -1,12 +1,10 @@
-
-
-const PokemonItem = ({img, name}) => {
+const PokemonItem = ({name}) => {
   return (
         <>
         <img 
-            src={`https://img.pokemondb.net/sprites/home/normal/${pokemon.name}.png`}
-            alt={`${pokemon.name}`}/>
-            <p key={index}>{pokemon.name}</p>
+            src={`https://img.pokemondb.net/sprites/home/normal/${name}.png`}
+            alt={`${name}`}/>
+            <p>{name}</p>
         </>
         );
 }
