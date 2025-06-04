@@ -6,7 +6,7 @@ import {ThemeContext} from "../../contexts/ThemeContext";
 const PokemonItem = ({name}) => {
   const theme = useContext(ThemeContext);
   return (
-        <div className={`pokemonItemContainer ${theme === "Dark" ? "Dark" : "Light"}`}>
+        <div className={`pokemonItemContainer ${theme === "dark" ? "dark" : "light"}`}>
         <img 
             src={`https://img.pokemondb.net/sprites/home/normal/${name}.png`}
             alt={`${name}`}/>
