@@ -41,7 +41,11 @@
 }
 
 /* Temas */
-
+.content-container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
 .container.dark {
   background-color: #121212;
   color: #f0f0f0;

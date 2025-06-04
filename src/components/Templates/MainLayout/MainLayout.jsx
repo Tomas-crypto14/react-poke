@@ -16,12 +16,14 @@ const MainLayout = ({leftContent, rightContent}) => {
           Cambiar a {getNextThemeLabel(theme)}
         </button>
       </header>
+      <div className="content-container">
         <div className="leftContent">
             {leftContent}
         </div>
         <div className="rightContent">
             {rightContent}
         </div>
+      </div>
     </div>);
 }
 
