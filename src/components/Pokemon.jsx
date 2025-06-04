@@ -1,8 +1,7 @@
-import {useEffect, useState} from "react"
+import {useEffect, useState, useContext} from "react"
 const Pokemon = () => {
     const [pokemons, setPokemon] = useState([]);
     const [filteredPokemons, setFilteredPokemon] = useState([]);
-
     const [search, setSearch] = useState([]);
     //Se tiene que hacer una función async con un mapeo de data.results con fetch, con el fetch
     //de la pokeapi que tenemos, hacemos un fetch secundario a la URL de los pokemons.
