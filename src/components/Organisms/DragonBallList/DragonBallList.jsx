@@ -1,6 +1,6 @@
 import {useState, useEffect, useContext} from "react";
 import axios from "axios";
-import {ThemeContext} from "../../contexts/ThemeContext";
+import {ThemeContext} from "../../../contexts/ThemeContext";
 import { DragonBallItem } from "../../Molecules/DragonBallItem/DragonBallItem";
 import "./DragonBallList.scss";
 const DragonBallList = () => {

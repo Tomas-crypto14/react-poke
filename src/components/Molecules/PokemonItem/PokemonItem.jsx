@@ -1,6 +1,6 @@
 import "./PokemonItem.scss"
 import {useContext} from "react";
-import {ThemeContext} from "../../contexts/ThemeContext";
+import {ThemeContext} from "../../../contexts/ThemeContext";
 //En el molecules, se hace una función para coger la imagen de los nombres de los Pokemon en el PokemonList
 //del componente PokemonList de Organisms
 const PokemonItem = ({name}) => {

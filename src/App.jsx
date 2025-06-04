@@ -6,13 +6,12 @@ import { DragonBallList } from "./components/Organisms/DragonBallList/DragonBall
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import {useState} from "react"
 import {MainLayout} from "./components/Templates/MainLayout/MainLayout";
-import {ThemeContext, themes} from "./components/contexts/ThemeContext"
+import {ThemeContext} from "./contexts/ThemeContext"
 import './App.scss';
 
 function App () {
-  const [theme, setTheme] = useState(themes.light);
   return(
-  <ThemeContext.Provider value={theme}>
+  <ThemeContext.Provider value={"dark"}>
   <h1>Pokedex</h1>
   <BrowserRouter>
   <Header/>

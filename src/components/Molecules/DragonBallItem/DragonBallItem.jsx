@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {ThemeContext} from "../../contexts/ThemeContext";
+import {ThemeContext} from "../../../contexts/ThemeContext";
 import "./DragonBallItem.scss"
 const DragonBallItem = ({name, img}) => {
   const theme = useContext(ThemeContext);

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext, themes } from "../../contexts/ThemeContext";
+import { ThemeContext, themes } from "../../../contexts/ThemeContext";
 import "./MainLayout.scss"
 const MainLayout = ({leftContent, rightContent}) => {
   const { theme, toggleTheme } = useContext(ThemeContext);

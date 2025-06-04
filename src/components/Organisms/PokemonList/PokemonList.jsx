@@ -4,7 +4,7 @@
 
 import {useEffect, useState, useContext} from "react";
 import axios from "axios";
-import {ThemeContext} from "../../contexts/ThemeContext";
+import {ThemeContext} from "../../../contexts/ThemeContext";
 import {PokemonItem} from "../../Molecules/PokemonItem/PokemonItem"
 import "./PokemonList.scss"
 const PokemonList = () => {
