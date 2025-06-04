@@ -10,8 +10,9 @@ import {ThemeContext, themes} from "./components/contexts/ThemeContext"
 import './App.scss';
 
 function App () {
+  const [theme, setTheme] = useState(themes.light);
   return(
-  <ThemeContext.Provider value={"Mbappe"}>
+  <ThemeContext.Provider value={theme}>
   <h1>Pokedex</h1>
   <BrowserRouter>
   <Header/>
