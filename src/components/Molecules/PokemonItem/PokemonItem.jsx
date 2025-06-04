@@ -10,7 +10,7 @@ const PokemonItem = ({name}) => {
         <img 
             src={`https://img.pokemondb.net/sprites/home/normal/${name}.png`}
             alt={`${name}`}/>
-            <p>{name}</p>
+            <p>{theme}</p>
         </div>
         );
 }

@@ -16,8 +16,8 @@ const DragonBallList = () => {
 
   return (
     <div>
-        <h2>{theme}</h2>
-        <div className={`charactersContainer ${theme === "Dark" ? "Dark" : "Light"}`}>
+        <h2>{theme} DragonBall List</h2>
+        <div className={"charactersContainer"}>
         {character.map((fighter, index) => (<DragonBallItem name={fighter.name} img={fighter.image} key={index}/>
     ))}
         </div>

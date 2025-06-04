@@ -20,8 +20,8 @@ const PokemonList = () => {
     }, []);
   return (
     <div>
-        <h2>{theme}</h2>
-        <div className={`pokemonsContainer ${theme === "Dark" ? "Dark" : "Light"}`}>
+        <h2>{theme} Pokemon List</h2>
+        <div className={"pokemonsContainer"}>
         {pokemons.map((pokemon, index) => (<PokemonItem name={pokemon.name} key={index}/>
     ))}
         </div>
