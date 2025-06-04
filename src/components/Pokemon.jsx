@@ -1,4 +1,4 @@
-import {useEffect, useState, useContext} from "react"
+import {useEffect, useState} from "react"
 const Pokemon = () => {
     const [pokemons, setPokemon] = useState([]);
     const [filteredPokemons, setFilteredPokemon] = useState([]);
