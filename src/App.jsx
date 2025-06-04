@@ -11,7 +11,7 @@ import './App.scss';
 
 function App () {
   return(
-  <ThemeContext.Provider value={"Tortuga"}>
+  <ThemeContext.Provider value={"Light"}>
   <h1>Pokedex</h1>
   <BrowserRouter>
   <Header/>

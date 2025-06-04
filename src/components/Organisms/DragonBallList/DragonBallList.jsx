@@ -1,9 +1,11 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useContext} from "react";
 import axios from "axios";
+import {ThemeContext} from "../../contexts/ThemeContext";
 import { DragonBallItem } from "../../Molecules/DragonBallItem/DragonBallItem";
 import "./DragonBallList.scss";
 const DragonBallList = () => {
      const [character, setCharacters] = useState([]);
+     const theme = useContext(ThemeContext);
     useEffect(() => {
         axios.get(`https://dragonball-api.com/api/characters?limit=1000`)
         .then((data) => data.data)
@@ -14,8 +16,8 @@ const DragonBallList = () => {
 
   return (
     <div>
-        <h2>DragonBallList</h2>
-        <div className="charactersContainer">
+        <h2>{theme}</h2>
+        <div className={`charactersContainer ${theme === "Dark" ? "Dark" : "Light"}`}>
         {character.map((fighter, index) => (<DragonBallItem name={fighter.name} img={fighter.image} key={index}/>
     ))}
         </div>
