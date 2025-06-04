@@ -6,11 +6,12 @@ import { DragonBallList } from "./components/Organisms/DragonBallList/DragonBall
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import {useState} from "react"
 import {MainLayout} from "./components/Templates/MainLayout/MainLayout";
+import {ThemeContext} from "./components/contexts/ThemeContext"
 import './App.scss';
 
 function App () {
   return(
-  <>
+  <ThemeContext.Provider value={"Tortuga"}>
   <h1>Pokedex</h1>
   <BrowserRouter>
   <Header/>
@@ -21,7 +22,7 @@ function App () {
     </Routes>
   </BrowserRouter>
   
-  </>
+  </ThemeContext.Provider>
   )
 };
 

@@ -16,7 +16,7 @@ const DragonBallList = () => {
     <div>
         <h2>DragonBallList</h2>
         <div className="charactersContainer">
-        {character.map((fighter, index) => (<DragonBallItem name={fighter.name} image={fighter.image} key={index}/>
+        {character.map((fighter, index) => (<DragonBallItem name={fighter.name} img={fighter.image} key={index}/>
     ))}
         </div>
     </div>
