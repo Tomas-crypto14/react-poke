@@ -1,12 +1,9 @@
 //import "./DragonBallItem.scss"
 const DragonBallItem = ({name, image}) => {
   return (
-    <div>
-    <img
-        src={`image":"https://dragonball-api.com/characters/${image}.webp`}
-        alt={`${name}`}/>
+    <div className="characterItem">
         <p>{name}</p>
-        <p>{image}</p>
+        <img src={image} alt={`Image of ${name}`}/>
     </div>
     
   )
