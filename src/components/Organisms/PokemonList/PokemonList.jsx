@@ -6,22 +6,15 @@ import {useEffect, useState, useContext} from "react";
 import axios from "axios";
 import {ThemeContext} from "../../../contexts/ThemeContext";
 import {PokemonItem} from "../../Molecules/PokemonItem/PokemonItem"
+import { useFetchPokemonsData } from "../../../hooks/useFetchPokemonData"
 import "./PokemonList.scss"
 const PokemonList = () => {
-    const [pokemons, setPokemons] = useState([]);
+    const {pokemons, loading} = useFetchPokemonsData();
     const {theme} = useContext(ThemeContext);
-    useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon?limit=1500`)
-        .then((data) => data.data)
-        .then((pokemonList) => {
-            console.log(pokemonList)
-            setPokemons(pokemonList.results)
-        })
-    }, []);
   return (
     <div>
         <h2>{theme} Pokemon List</h2>
-        <div className={"pokemonsContainer"}>
+        <div className="pokemonsContainer">
         {pokemons.map((pokemon, index) => (<PokemonItem name={pokemon.name} key={index}/>
     ))}
         </div>
