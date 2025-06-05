@@ -16,7 +16,7 @@ const PokemonList = () => {
     const {theme} = useContext(ThemeContext);
   return (
     <div>
-        <h2>{theme} Pokemon List</h2>
+        <h2>Pokemon List</h2>
         <div className="pokemonsContainer">
         {pokemons.map((pokemon, index) => (<PokemonItem name={pokemon.name} key={index}/>
     ))}

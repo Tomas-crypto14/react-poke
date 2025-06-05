@@ -13,7 +13,7 @@ const DragonBallList = () => {
 
   return (
     <div>
-        <h2>{theme}</h2>
+        <h2>DragonBall</h2>
         <div className={"charactersContainer"}>
         {characters.map((fighter, index) => (<DragonBallItem name={fighter.name} img={fighter.image} key={index}/>
     ))}
