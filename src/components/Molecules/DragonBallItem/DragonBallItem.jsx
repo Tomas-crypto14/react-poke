@@ -4,9 +4,9 @@ import "./DragonBallItem.scss"
 const DragonBallItem = ({name, img}) => {
   const {theme} = useContext(ThemeContext);
   return (
-    <div onClick={() => setTheme("dark")} className={"characterItem"}>
+    <div className={`characterItemContainer${theme == "dark" ? "-dark" : ''}`}>
         <img src={img} alt={`${name}.png`}/>
-        <p>{theme}</p>
+        <p className={`itemText${theme == "dark" ? "-dark" : ''}`}>{name}</p>
     </div>
     
   )
