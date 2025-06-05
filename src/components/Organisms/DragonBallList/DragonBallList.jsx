@@ -4,11 +4,11 @@ import {ThemeContext} from "../../../contexts/ThemeContext";
 import { DragonBallItem } from "../../Molecules/DragonBallItem/DragonBallItem";
 import "./DragonBallList.scss";
 const DragonBallList = () => {
-     const [character, setCharacters] = useState([]);
-     const theme = useContext(ThemeContext);
+     const [characters, setCharacters] = useState([]);
+     const {theme} = useContext(ThemeContext);
     useEffect(() => {
         axios.get(`https://dragonball-api.com/api/characters?limit=1000`)
-        .then((data) => data.data)
+        .then((res) => res.data)
         .then((characterList) => {
             setCharacters(characterList.items)
         })
@@ -16,9 +16,9 @@ const DragonBallList = () => {
 
   return (
     <div>
-        <h2>{theme} DragonBall List</h2>
+        <h2>{theme}</h2>
         <div className={"charactersContainer"}>
-        {character.map((fighter, index) => (<DragonBallItem name={fighter.name} img={fighter.image} key={index}/>
+        {characters.map((fighter, index) => (<DragonBallItem name={fighter.name} img={fighter.image} key={index}/>
     ))}
         </div>
     </div>
