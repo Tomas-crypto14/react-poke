@@ -9,7 +9,10 @@ import {PokemonItem} from "../../Molecules/PokemonItem/PokemonItem"
 import { useFetchPokemonsData } from "../../../hooks/useFetchPokemonData"
 import "./PokemonList.scss"
 const PokemonList = () => {
-    const {pokemons, loading} = useFetchPokemonsData();
+    const {pokemons, loading} = useFetchPokemonsData({
+    url: `https://pokeapi.co/api/v2/pokemon?limit=1500`, 
+    resultsAttribute: "results"
+    });
     const {theme} = useContext(ThemeContext);
   return (
     <div>

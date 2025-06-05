@@ -5,7 +5,10 @@ import { DragonBallItem } from "../../Molecules/DragonBallItem/DragonBallItem";
 import { useFetchCharactersData } from "../../../hooks/useFetchCharactersData"
 import "./DragonBallList.scss";
 const DragonBallList = () => {
-     const {characters, loading} = useFetchCharactersData();
+     const {characters, loading} = useFetchCharactersData({
+        url: `https://dragonball-api.com/api/characters?limit=1000`,
+        resultsAttribute: "items"
+     });
      const {theme} = useContext(ThemeContext);
 
   return (
