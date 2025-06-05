@@ -9,7 +9,7 @@ import {PokemonItem} from "../../Molecules/PokemonItem/PokemonItem"
 import "./PokemonList.scss"
 const PokemonList = () => {
     const [pokemons, setPokemons] = useState([]);
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon?limit=1500`)
         .then((data) => data.data)

@@ -4,7 +4,7 @@ import {ThemeContext} from "../../../contexts/ThemeContext";
 //En el molecules, se hace una función para coger la imagen de los nombres de los Pokemon en el PokemonList
 //del componente PokemonList de Organisms
 const PokemonItem = ({name}) => {
-  const theme = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
   return (
         <div className={`pokemonItemContainer ${theme === "dark" ? "dark" : "light"}`}>
         <img 
